@@ -89,16 +89,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m
+    dalvik.vm.heapmaxfree=8m \
+    ro.af.client_heap_size_kbyte=7168 \
+    persist.vendor.audio.hw.binder.size_kbyte=1024
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.effect@2.0-service \
+    android.hardware.audio@4.0-impl \
+    android.hardware.audio@4.0-service \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio.effect@4.0-service \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.soundtrigger@2.1-service \
+    android.hardware.audio.common@4.0 \
+    android.hardware.audio.common@4.0-util
+
+PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio_amplifier.msm8996 \
     audio.primary.msm8996 \
